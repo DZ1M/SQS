@@ -1,4 +1,5 @@
 using Amazon.DynamoDBv2;
+using Amazon.DynamoDBv2.Model;
 using Amazon.Lambda.Core;
 using Amazon.Lambda.SQSEvents;
 
@@ -54,5 +55,26 @@ public class Function
 
         // TODO: Do interesting work based on the new message
         await Task.CompletedTask;
+    }
+
+    private async Task Test(Guid id, int qtd)
+    {
+        var request = new UpdateItemRequest
+        {
+            TableName = "usuarios",
+            ReturnValues = "NONE",
+            Key = new Dictionary<string, AttributeValue>
+            {
+                {"Id", new AttributeValue{ S = id.ToString() } }
+            },
+            UpdateExpression = "SET qtd = (qtd - :qtdPedido)",
+            ConditionExpression = "qtd >= :qtdPedido",
+            ExpressionAttributeValues = new Dictionary<string, AttributeValue>
+            {
+                { "qtdPedido", new AttributeValue{ N = qtd.ToString()} }
+            }
+        };
+
+        await amazonDynamoDBClient.UpdateItemAsync(request);
     }
 }
