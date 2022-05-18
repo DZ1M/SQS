@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQS.Domain", "SQS.Domain\SQ
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SQS.Contatos.API", "SQS.Contato.API\SQS.Contatos.API.csproj", "{869D6A0B-B99B-4C54-8E97-A22EBE85892B}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SQS.Contatos.DynamoDB", "SQS.Contatos.DynamoDB\SQS.Contatos.DynamoDB.csproj", "{C4F9F6B4-5F10-4515-B312-82D1188873F3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SQS.Contatos.Leitor", "SQS.Contatos.Leitor\SQS.Contatos.Leitor.csproj", "{C8F61C79-6669-49B8-AF42-26C7BD3127DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{869D6A0B-B99B-4C54-8E97-A22EBE85892B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{869D6A0B-B99B-4C54-8E97-A22EBE85892B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{869D6A0B-B99B-4C54-8E97-A22EBE85892B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4F9F6B4-5F10-4515-B312-82D1188873F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4F9F6B4-5F10-4515-B312-82D1188873F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4F9F6B4-5F10-4515-B312-82D1188873F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4F9F6B4-5F10-4515-B312-82D1188873F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8F61C79-6669-49B8-AF42-26C7BD3127DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8F61C79-6669-49B8-AF42-26C7BD3127DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8F61C79-6669-49B8-AF42-26C7BD3127DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8F61C79-6669-49B8-AF42-26C7BD3127DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
