@@ -21,7 +21,7 @@ public class Function
             if (record.EventName == "INSERT")
             {
                 var contato = record.Dynamodb.NewImage.ToObject<Contato>();
-                contato.Status = Domain.Enums.StatusContato.enviado;
+                contato.Status = Domain.Enums.StatusContato.Enviado;
 
                 try
                 {
@@ -29,8 +29,8 @@ public class Function
                 }
                 catch
                 {
-                    await SNSHelper.SendSNS(SNSFilaEnum.falha, contato);
-                    contato.Status = Domain.Enums.StatusContato.erro;
+                    await SNSHelper.SendSNS("topico", contato);
+                    contato.Status = Domain.Enums.StatusContato.Erro;
                 }
                 finally
                 {
